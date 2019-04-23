@@ -67,7 +67,7 @@ def stats(infile):
 
 def adjustDepth(infile):
     """
-    this is to bring data to m
+    this is to bring data to meters
     :param infile: the .tif mosaic (-1 to 1500)
     :return: the .tif mosaic (-0.01 to 15 m)
     """
