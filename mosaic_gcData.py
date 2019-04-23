@@ -1,13 +1,13 @@
 #! /usr/bin/env python
 
 """
-Problem: To mosaic planet quads for areas where field data exist as a way to reduce the size of mosaics used for operational purposes
+Problem: To mosaic planet depth quads for areas where field data exist as a way to reduce the size of mosaics used for operational purposes
 User: global coral project
 Target system: Python (https://www.python.org/)
 interface: PyCharm
 Functional requirements:
-                        ##inputs: A txt file with a list of planet quads
-                        ##outputs: A mosaic for areas where field data is available (.shp)
+                        ##inputs: A txt file with a list of planet depth quads
+                        ##outputs: A depth mosaic for areas where field data is available (.shp)
 
 Author: Rodney Borrego Acevedo (r.borregoacevedo@uq.edu.au)
 
@@ -20,7 +20,7 @@ import os
 def makeVrt(infile):
     """
     make a virtual mosaic
-    :param infile: txt listing all tiles in a set location
+    :param infile: txt listing all depth tiles in a set location
     :return: a virtual mosaic
     """
     outname = infile[:-4] + ".vrt"
@@ -32,7 +32,7 @@ def makeVrt(infile):
 def subsetVrt(shp, infile):
     """
     Subsetting the virtual mosaic,the combination between dstnodata and dstalpha make the 9999 trasnparent
-    :param shp: a mask shapefile for the extent the mosaci will be built
+    :param shp: a mask shapefile for the extent of the mosaic that will be built
     :param infile: the virtual mosaic from makeVrt function
     :return: a subset from the virtual mosaic
     """
@@ -44,9 +44,9 @@ def subsetVrt(shp, infile):
 
 def makeMosaic(infile):
     """
-    make the actual mosaic limited to the shp extent using 24 cores and 80 GB memory in the High Performance Computer
+    make the actual depth mosaic limited to the shp extent using 24 cores and 80 GB memory in the High Performance Computer
     :param infile: subsetted vrt
-    :return: the actual .tif mosaic
+    :return: the actual .tif depth mosaic
     """
     outname2 = infile[3:-4] + '.tif'
     cmd = "gdal_translate -of 'GTiff' -b 1 -co NUM_THREADS=ALL_CPUS -co BIGTIFF=IF_NEEDED --config GDAL_CACHEMAX 80000 {} {}".format(
@@ -58,8 +58,8 @@ def makeMosaic(infile):
 def stats(infile):
     """
     RIOS code to calc stats and pyramid efficiently
-    :param infile: the .tif mosaic
-    :return: the .tif mosaic with stats calculated
+    :param infile: the .tif depth mosaic
+    :return: the .tif depth mosaic with stats calculated
     """
     cmd = 'python gdalcalcstats.py {} -pyramid '.format(infile)
     os.system(cmd)
