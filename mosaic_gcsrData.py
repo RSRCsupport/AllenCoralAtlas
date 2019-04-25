@@ -1,13 +1,13 @@
 #! /usr/bin/env python
 
 """
-Problem: To mosaic planet depth quads for areas where field data exist as a way to reduce the size of mosaics used for operational purposes
+Problem: To mosaic planet surface reflectance quads for areas where field data exist as a way to reduce the size of mosaics used for operational purposes
 User: global coral project
 Target system: Python (https://www.python.org/)
 interface: PyCharm
 Functional requirements:
-                        ##inputs: A txt file with a list of planet depth quads
-                        ##outputs: A depth mosaic for areas where field data is available (.shp)
+                        ##inputs: A txt file with a list of planet surface reflectance quads
+                        ##outputs: A surface reflectance mosaic for areas where field data is available (.shp)
 
 Author: Rodney Borrego Acevedo (r.borregoacevedo@uq.edu.au)
 
@@ -20,7 +20,7 @@ import os
 def makeVrt(infile):
     """
     make a virtual mosaic
-    :param infile: txt listing all depth tiles in a set location
+    :param infile: txt listing all surface reflectance tiles in a set location
     :return: a virtual mosaic
     """
     outname = infile[:-4] + ".vrt"
@@ -37,19 +37,19 @@ def subsetVrt(shp, infile):
     :return: a subset from the virtual mosaic
     """
     outname1 = "cut" + infile[:-4] + '.vrt'
-    cmd = 'gdalwarp -of GTiff -dstnodata -9999 -cutline {} -crop_to_cutline -dstalpha  {} {}'.format(shp, infile, outname1)
+    cmd = 'gdalwarp -of GTiff -dstnodata -999 -cutline {} -crop_to_cutline -dstalpha  {} {}'.format(shp, infile, outname1)
     os.system(cmd)
     return (outname1)
 
 
 def makeMosaic(infile):
     """
-    make the actual depth mosaic limited to the shp extent using 24 cores and 80 GB memory in the High Performance Computer
+    make the actual surface reflectance mosaic limited to the shp extent using 24 cores and 80 GB memory in the High Performance Computer
     :param infile: subsetted vrt
-    :return: the actual .tif depth mosaic
+    :return: the actual .tif surface reflectance mosaic
     """
     outname2 = infile[3:-4] + '.tif'
-    cmd = "gdal_translate -of 'GTiff' -b 1 -co NUM_THREADS=ALL_CPUS -co BIGTIFF=IF_NEEDED --config GDAL_CACHEMAX 80000 {} {}".format(
+    cmd = "gdal_translate -of 'GTiff' -b 1 -b 2 -b 3 -b 4 -co NUM_THREADS=ALL_CPUS -co BIGTIFF=IF_NEEDED --config GDAL_CACHEMAX 80000 {} {}".format(
         infile, outname2)
     os.system(cmd)
     return (outname2)
@@ -58,14 +58,14 @@ def makeMosaic(infile):
 def stats(infile):
     """
     RIOS code to calc stats and pyramid efficiently
-    :param infile: the .tif depth mosaic
-    :return: the .tif depth mosaic with stats calculated
+    :param infile: the .tif surface reflectance mosaic
+    :return: the .tif surface reflectance mosaic with stats calculated
     """
     cmd = 'python gdalcalcstats.py {} -pyramid '.format(infile)
     os.system(cmd)
 
 
-def adjustDepth(infile):
+def adjustsr(infile):
     """
     this is to bring data to meters
 
@@ -106,8 +106,8 @@ def mainRoutine():
     stats(outname2)
 
 
-# print ("Adjusting depth values for {}".format(outname2))
-# outname3=adjustDepth(outname2)
+# print ("Adjusting surface reflectance values for {}".format(outname2))
+# outname3=adjustsr(outname2)
 # print ("Finally calculating stats from {}....".format(outname3))
 # stats(outname3)
 
