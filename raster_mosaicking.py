@@ -37,7 +37,7 @@ def makeMosaic(infile):
 	Note: output to LZW compression and byte to reduce size
     """
     outname1 = infile[:-4] + '.tif'
-    cmd = "gdal_translate -of 'GTiff' -b 1 -b 2 -b 3  -co COMPRESS=LZW -co NUM_THREADS=ALL_CPUS -co BIGTIFF=IF_NEEDED --config GDAL_CACHEMAX 80000 {} {}".format(infile, outname1)
+    cmd = "gdal_translate -of 'GTiff' -b 1 -b 2 -b 3  -co COMPRESS=LZW -co NUM_THREADS=ALL_CPUS -co BIGTIFF=YES --config GDAL_CACHEMAX 80000 {} {}".format(infile, outname1)
     os.system(cmd)
     return (outname1)
 
