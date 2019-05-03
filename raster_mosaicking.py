@@ -44,7 +44,7 @@ def makeMosaic(infile):
 
 def stats(infile):
     """
-    RIOS code to calc stats and pyramid efficiently
+    RIOS code to calc stats and pyramid efficiently easy to use
     :param infile: the .tif surface reflectance mosaic
     :return: the .tif surface reflectance mosaic with stats calculated
     """
