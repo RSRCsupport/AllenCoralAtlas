@@ -48,7 +48,7 @@ def stats(infile):
     :param infile: the .tif surface reflectance mosaic
     :return: the .tif surface reflectance mosaic with stats calculated
     """
-    cmd = 'python gdalcalcstats.py {} -pyramid '.format(infile)
+    cmd = 'python gdalcalcstats.py {} -pyramid -ignore 0'.format(infile)
     os.system(cmd)
 
 
