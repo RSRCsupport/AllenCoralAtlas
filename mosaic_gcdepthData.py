@@ -49,7 +49,7 @@ def makeMosaic(infile):
     :return: the actual .tif depth mosaic
     """
     outname2 = infile[3:-4] + '.tif'
-    cmd = "gdal_translate -of 'GTiff' -b 1 -co NUM_THREADS=ALL_CPUS -co BIGTIFF=IF_NEEDED --config GDAL_CACHEMAX 80000 {} {}".format(
+    cmd = "gdal_translate -of 'GTiff' -b 1 -co COMPRESS=LZW -co NUM_THREADS=ALL_CPUS -co BIGTIFF=YES --config GDAL_CACHEMAX 80000 {} {}".format(
         infile, outname2)
     os.system(cmd)
     return (outname2)
