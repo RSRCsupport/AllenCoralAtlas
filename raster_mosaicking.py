@@ -7,7 +7,7 @@ Target system: Python (https://www.python.org/)
 interface: PyCharm
 Functional requirements:
                         ##inputs: A txt file with a list of rasters
-                        ##outputs: A mosaic 
+                        ##outputs: A final mosaic compressed using LZW
 
 Author: Rodney Borrego Acevedo (r.borregoacevedo@uq.edu.au, 2/05/2019)
 
