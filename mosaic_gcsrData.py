@@ -49,7 +49,7 @@ def makeMosaic(infile):
     :return: the actual .tif surface reflectance mosaic
     """
     outname2 = infile[3:-4] + '.tif'
-    cmd = "gdal_translate -of 'GTiff' -b 1 -b 2 -b 3 -b 4 -co NUM_THREADS=ALL_CPUS -co BIGTIFF=IF_NEEDED --config GDAL_CACHEMAX 80000 {} {}".format(
+    cmd = "gdal_translate -of 'GTiff' -co COMPRESS=LZW -b 1 -b 2 -b 3 -b 4 -co NUM_THREADS=ALL_CPUS -co BIGTIFF=YES --config GDAL_CACHEMAX 80000 {} {}".format(
         infile, outname2)
     os.system(cmd)
     return (outname2)
