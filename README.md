@@ -73,16 +73,17 @@ and you created a project (if not follow
  
  By default [gcloud SDK](https://cloud.google.com/sdk/docs/quickstart-linux) is included when you create your VM
  so you can use [gsutils](https://cloud.google.com/storage/docs/gsutil) to move data or scripts from the bucket/your pc
- to the VM's home directory. For example use the code below move data from the Vulcan bucket to the VM's home dir
+ to the VM's home directory. For example use the code below to move data from the Vulcan bucket to the VM's home dir
  
  First initialize the gcloud SDK and follow the prompts
  ````
  gcloud init
  ````
  Then use gsutil to move data
+ 
  ````
  gsutil -m cp -r gs://coral-atlas-data-pipeline/fiji_high_tide_normalized_sr_v2_aug2017_thru_april2019_mosaic-coastal-1 ~/
  
- ``` 
+ ````
  
  
