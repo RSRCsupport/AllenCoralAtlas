@@ -49,8 +49,8 @@ and you created a project (if not follow
  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
  ````
  
- The executable file (.sh) for miniconda should be in the VM home directory, 
- just type the code below to have installed
+ The shell script (.sh) for miniconda should be in the VM home directory, 
+ just type the code below to have it installed. If you get permission errors, type `chmod 750 Miniconda3-latest-Linux-x86_64.sh`
  
  ````
  bash Miniconda3-latest-Linux-x86_64.sh
@@ -63,7 +63,7 @@ and you created a project (if not follow
   conda install -c conda-forge gdal
   ````
  
- Same process with rios or any other library that needs to be installed.
+ Same process with rios or any other libraries that need to be installed.
  
  
  
