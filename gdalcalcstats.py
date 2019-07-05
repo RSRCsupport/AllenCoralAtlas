@@ -45,7 +45,7 @@ def getCmdargs():
     could be added if required. 
     
     """
-    p = argparse.ArgumentParser()
+    p = argparse.ArgumentParser(description='To neatly calculate stats (very efficiently) for big tif data. It uses the RIOS packages available in anaconda at https://anaconda.org/conda-forge/rios')
     p.add_argument("imagefile", help="Image file on which to calculate stats")
     p.add_argument("-pyramid", default=False, action="store_true",
         help="Calculate pyramid layers")

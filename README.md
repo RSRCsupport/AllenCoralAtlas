@@ -145,3 +145,20 @@ optional arguments:
                         set to any of these options Byte/Int16/UInt16/UInt32/I
                         nt32/Float32/Float64/CInt16/CInt32/CFloat32/CFloat64)(
                         default=UInt16)
+````
+- gdalcalstats.py
+````
+ rodbio2008@vmtovulcan:~$ python gdalcalcstats.py -h
+usage: gdalcalcstats.py [-h] [-pyramid] [-ignore IGNORE] imagefile
+
+To neatly calculate stats (very efficiently) for big tif data. It uses the
+RIOS packages available in anaconda at https://anaconda.org/conda-forge/rios
+
+positional arguments:
+  imagefile       Image file on which to calculate stats
+
+optional arguments:
+  -h, --help      show this help message and exit
+  -pyramid        Calculate pyramid layers
+  -ignore IGNORE  Stats ignore value (default is None)
+````
