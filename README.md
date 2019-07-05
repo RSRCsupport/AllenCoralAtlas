@@ -35,9 +35,9 @@ and you created a project (if not follow
  the better, be of course mindful to turn off your virtual machine when not in use to avoid being 
  extra charged :sob:
  
- Once the VM is started you will see a terminal like this below
+ Once the VM is started you will see a Linux terminal like the one below. 
  
- ![VMTerminal]()
+ ![VMTerminal](https://github.com/RSRCsupport/AllenCoralAtlas/blob/master/VMTerminal.png)
  
  
  
