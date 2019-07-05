@@ -39,6 +39,19 @@ and you created a project (if not follow
 
  ![VMTerminal](https://github.com/RSRCsupport/AllenCoralAtlas/blob/master/VMlinuxterm.png)
  
+ In the terminal type these lines of code one by one to install miniconda 
+ (compact [Anaconda](https://www.anaconda.com/) version) that enables to easily install 
+ libraries needed for the scripts to work.
+ 
+ ````
+ sudo apt-get update
+ sudo apt-get install bzip2 libxml2-dev
+ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+ ````
+ 
+ 
+ 
+ 
  
  
   
