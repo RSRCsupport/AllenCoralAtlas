@@ -14,7 +14,7 @@ Table 1. Scripts to mosaic Planet quads
 |mosaic_surfaceReflectance.py|Build mosaic from surface reflectance quads|  
 |gdalcalcstats.py|Calculate stats and pyramids efficiently for big raster|
 
-### **How to set virtual machine (VM) in Google Cloud Platform and install required python libraries**
+### **How to set a virtual machine (VM) in Google Cloud Platform and install required python libraries**
 
 Assuming that you've got an account in the Google Cloud Platform 
 (if not follow [this](https://cloud.google.com/billing/docs/how-to/manage-billing-account))
