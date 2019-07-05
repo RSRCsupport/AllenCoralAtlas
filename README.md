@@ -36,7 +36,7 @@ and you created a project (if not follow
  extra charged :sob:
  
  Once the VM is started you will see a Linux terminal like the one below. 
- 
+
  ![VMTerminal](https://github.com/RSRCsupport/AllenCoralAtlas/blob/master/VMLinuxTerminal.png)
  
  
