@@ -14,4 +14,4 @@ computer or a virtual machines in cloud computing platforms (e.g. [Google Cloud]
 |mosaic_surfaceReflectance.py|Build mosaic from surface reflectance quads|  
 |gdalcalcstats.py|Calculate stats and pyramids efficiently for big raster|
 
-## **How to run the script in a virtual machine in Google Cloud Platform**
+## **How to run scripts in a virtual machine in Google Cloud Platform**
