@@ -47,23 +47,23 @@ and you created a project (if not follow
  libraries needed for the scripts to work.
  
  ````
- rodbio2008@vmtovulcan:~$ sudo apt-get update
- rodbio2008@vmtovulcan:~$ sudo apt-get install bzip2 libxml2-dev
- rodbio2008@vmtovulcan:~$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+ ~$ sudo apt-get update
+ ~$ sudo apt-get install bzip2 libxml2-dev
+ ~$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
  ````
  
  The shell script (.sh) for miniconda should be in the VM home directory, 
  just type the code below to have it installed. If you get permission errors, type `chmod 750 Miniconda3-latest-Linux-x86_64.sh`
  
  ````
- rodbio2008@vmtovulcan:~$ bash Miniconda3-latest-Linux-x86_64.sh
+ ~$ bash Miniconda3-latest-Linux-x86_64.sh
  ````
   Once miniconda is installed libraries like gdal or [rios](http://www.rioshome.org/en/latest/) can be installed via
   typical anaconda's "conda install" command line. To install gdal, for example, search in google "conda install gdal" 
   and you will get [this](https://anaconda.org/conda-forge/gdal), thus proceed with the line of code below. 
   
   ```` 
- rodbio2008@vmtovulcan:~$ conda install -c conda-forge gdal
+ ~$ conda install -c conda-forge gdal
   ````
  
  Same process with rios or any other libraries that need to be installed.
@@ -77,12 +77,12 @@ and you created a project (if not follow
  
  First initialize the gcloud SDK and follow the prompts
  ````
- rodbio2008@vmtovulcan:~$ gcloud init
+ ~$ gcloud init
  ````
  Then use gsutil to move data
  
  ````
- rodbio2008@vmtovulcan:~$ gsutil -m cp -r gs://coral-atlas-data-pipeline/fiji_high_tide_normalized_sr_v2_aug2017_thru_april2019_mosaic-coastal-1 ~/
+~$ gsutil -m cp -r gs://coral-atlas-data-pipeline/fiji_high_tide_normalized_sr_v2_aug2017_thru_april2019_mosaic-coastal-1 ~/
  
  ````
  
@@ -95,7 +95,7 @@ and you created a project (if not follow
  
  - mosaic_depth.py
  ``````  
- rodbio2008@vmtovulcan:~$ python mosaic_depth.py -h
+~$ python mosaic_depth.py -h
 usage: mosaic_depth.py [-h] [-inputshp INPUTSHP]
                        [-outputDataType OUTPUTDATATYPE]
                        inputTxtFile
@@ -123,7 +123,7 @@ optional arguments:
  
  - mosaic_surfaceReflectance.py
  ````
- rodbio2008@vmtovulcan:~$ python mosaic_surfaceReflectance.py -h
+~$ python mosaic_surfaceReflectance.py -h
 usage: mosaic_surfaceReflectance.py [-h] [-inputshp INPUTSHP]
                                     [-outputDataType OUTPUTDATATYPE]
                                     inputTxtFile
@@ -148,7 +148,7 @@ optional arguments:
 ````
 - gdalcalstats.py
 ````
- rodbio2008@vmtovulcan:~$ python gdalcalcstats.py -h
+~$ python gdalcalcstats.py -h
 usage: gdalcalcstats.py [-h] [-pyramid] [-ignore IGNORE] imagefile
 
 To neatly calculate stats (very efficiently) for big tif data. It uses the
