@@ -49,18 +49,21 @@ and you created a project (if not follow
  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
  ````
  
- The executable file (.sh) for miniconda should be in the VM home directory, just type the code below to have installed
+ The executable file (.sh) for miniconda should be in the VM home directory, 
+ just type the code below to have installed
  
  ````
  bash Miniconda3-latest-Linux-x86_64.sh
  ````
   Once miniconda is installed libraries like gdal or [rios](http://www.rioshome.org/en/latest/) can be installed via
   typical anaconda's conda install command line. To install gdal, for example,, search in google `conda install gdal` 
-  and you will get [this](https://anaconda.org/conda-forge/gdal), thus proceed with the line of code below
+  and you will get [this](https://anaconda.org/conda-forge/gdal), thus proceed with the line of code below. 
   
   ```` 
   conda install -c conda-forge gdal
   ````
+ 
+ Same process with rios or any other library that needs to be installed.
  
  
  
