@@ -27,7 +27,7 @@ and you created a project (if not follow
  Due to the amount of data to be mosaicked and my experience using the HPC for running the code, 
  the virtual machine should have minimum 64 vCPU, 240 GB memory but the higher computer power
  the better, be of course mindful to turn off your virtual machine when not in use to avoid being 
- extra charged :no_good:
+ extra charged :cry:
   
  
  
