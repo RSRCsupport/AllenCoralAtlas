@@ -26,7 +26,7 @@ and you created a project (if not follow
  about virtual machines (see [this](https://cloud.google.com/compute/docs/instances/)). Figure below
  show the sequence from creating to start a VM 
  
- ![flowchart](FlowChartVM.jpg)
+ ![flowchart](FlowChartVM.png)
  
  Due to the amount of data to be mosaicked and my experience using the HPC for running the code, 
  the virtual machine should have minimum 64 vCPU, 240 GB memory but the higher computer power
