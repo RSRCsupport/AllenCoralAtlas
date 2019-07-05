@@ -47,23 +47,23 @@ and you created a project (if not follow
  libraries needed for the scripts to work.
  
  ````
- sudo apt-get update
- sudo apt-get install bzip2 libxml2-dev
- wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+ rodbio2008@vmtovulcan:~$ sudo apt-get update
+ rodbio2008@vmtovulcan:~$ sudo apt-get install bzip2 libxml2-dev
+ rodbio2008@vmtovulcan:~$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
  ````
  
  The shell script (.sh) for miniconda should be in the VM home directory, 
  just type the code below to have it installed. If you get permission errors, type `chmod 750 Miniconda3-latest-Linux-x86_64.sh`
  
  ````
- bash Miniconda3-latest-Linux-x86_64.sh
+ rodbio2008@vmtovulcan:~$ bash Miniconda3-latest-Linux-x86_64.sh
  ````
   Once miniconda is installed libraries like gdal or [rios](http://www.rioshome.org/en/latest/) can be installed via
   typical anaconda's conda install command line. To install gdal, for example, search in google `conda install gdal` 
   and you will get [this](https://anaconda.org/conda-forge/gdal), thus proceed with the line of code below. 
   
   ```` 
-  conda install -c conda-forge gdal
+ rodbio2008@vmtovulcan:~$ conda install -c conda-forge gdal
   ````
  
  Same process with rios or any other libraries that need to be installed.
@@ -77,13 +77,71 @@ and you created a project (if not follow
  
  First initialize the gcloud SDK and follow the prompts
  ````
- gcloud init
+ rodbio2008@vmtovulcan:~$ gcloud init
  ````
  Then use gsutil to move data
  
  ````
- gsutil -m cp -r gs://coral-atlas-data-pipeline/fiji_high_tide_normalized_sr_v2_aug2017_thru_april2019_mosaic-coastal-1 ~/
+ rodbio2008@vmtovulcan:~$ gsutil -m cp -r gs://coral-atlas-data-pipeline/fiji_high_tide_normalized_sr_v2_aug2017_thru_april2019_mosaic-coastal-1 ~/
  
  ````
  
+ The same process can be used to move all the scripts in the table above to the VM's home dir
  
+ Once all the scripts and data are available in the VM's home dir they can be run directly from the command line 
+ Each of these scripts were written including a help flag that lists all the options available.
+ A more detailed help with examples was included as docstrings in each code.
+ Below each script with their associated help. 
+ 
+ - mosaic_depth.py
+ ``````  
+ rodbio2008@vmtovulcan:~$ python mosaic_depth.py -h
+usage: mosaic_depth.py [-h] [-inputshp INPUTSHP]
+                       [-outputDataType OUTPUTDATATYPE]
+                       inputTxtFile
+
+This script mosaics planet depth or bottom reflectance quads with the options
+1) to limit the output to a shapefile extent and 2) set datatype per bands
+(see options below)
+
+positional arguments:
+  inputTxtFile          txt file built by ls *.tif > nameOfTheMosaic.txt with
+                        the Planet depth or bottom reflectance quads to be
+                        mosaicked
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -inputshp INPUTSHP    an optional shapefile for including quads that need to
+                        be mosaicked
+  -outputDataType OUTPUTDATATYPE
+                        output data type per band (default UInt16 but can be
+                        set to any of these options Byte/Int16/UInt16/UInt32/I
+                        nt32/Float32/Float64/CInt16/CInt32/CFloat32/CFloat64)(
+                        default=UInt16)
+
+ ``````
+ 
+ - mosaic_surfaceReflectance.py
+ ````
+ rodbio2008@vmtovulcan:~$ python mosaic_surfaceReflectance.py -h
+usage: mosaic_surfaceReflectance.py [-h] [-inputshp INPUTSHP]
+                                    [-outputDataType OUTPUTDATATYPE]
+                                    inputTxtFile
+
+This script mosaics planet surface reflectance quads with the options 1) to
+limit the output to a shapefile extent and 2) set datatype per bands (see
+options below)
+
+positional arguments:
+  inputTxtFile          txt file built by ls *.tif > nameOfTheMosaic.txt with
+                        the Planet surface reflectance quads to be mosaicked
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -inputshp INPUTSHP    an optional shapefile for including quads that need to
+                        be mosaicked
+  -outputDataType OUTPUTDATATYPE
+                        output data type per band (default UInt16 but can be
+                        set to any of these options Byte/Int16/UInt16/UInt32/I
+                        nt32/Float32/Float64/CInt16/CInt32/CFloat32/CFloat64)(
+                        default=UInt16)
