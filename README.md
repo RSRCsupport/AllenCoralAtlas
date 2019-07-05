@@ -24,9 +24,10 @@ and you created a project (if not follow
  ([see details here](https://cloud.google.com/compute/docs/quickstart-linux) and 
  [here](https://cloud.google.com/compute/docs/instances/create-start-instance)). 
  
- Due to the amount of data to be mosaicked and my experience using HPC, 
+ Due to the amount of data to be mosaicked and my experience using the HPC for running the code, 
  the virtual machine should have minimum 64 vCPU, 240 GB memory but the higher computer power
- the better :laughing: 
+ the better, be of course mindful to turn off your virtual machine when not in use to avoid being 
+ extra charged :blush: 
   
  
  
