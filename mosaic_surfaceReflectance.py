@@ -84,6 +84,7 @@ def subsetVrt(shp, infile):
 def makeMosaic(dataType,infile):
     """
     make the actual mosaic limited to the shp extent
+    :param infile: data type argument
     :param infile: subsetted vrt
     :return: the actual .tif mosaic
     """
