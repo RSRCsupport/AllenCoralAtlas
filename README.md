@@ -55,7 +55,7 @@ and you created a project (if not follow
  bash Miniconda3-latest-Linux-x86_64.sh
  ````
   Once miniconda is installed libraries like gdal or [rios](http://www.rioshome.org/en/latest/) can be installed via
-  typical anaconda's conda install command line. To install gdal, search in google conda install gdal 
+  typical anaconda's conda install command line. To install gdal, for example,, search in google `conda install gdal` 
   and you will get [this](https://anaconda.org/conda-forge/gdal), thus proceed with the line of code below
   
   ```` 
