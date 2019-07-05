@@ -49,6 +49,12 @@ and you created a project (if not follow
  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
  ````
  
+ The executable file (.sh) for miniconda should be in the VM home directory, just type the code below to have installed
+ 
+ ````
+ bash Miniconda3-latest-Linux-x86_64.sh
+ ````
+ 
  
  
  
