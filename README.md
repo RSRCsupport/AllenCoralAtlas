@@ -10,7 +10,7 @@ computer or a virtual machines in cloud computing platforms (e.g. [Google Cloud]
 
 | Script        | Purpose           |
 |:------------- |:-------------|  
-|mosaic_depth.py|Build mosaic from depth and bottom reflectance| 
+|mosaic_depth.py|Build mosaic from depth and bottom reflectance quads| 
 |mosaic_surfaceReflectance.py|Build mosaic from surface reflectance quads|  
 |gdalcalcstats.py|Calculate stats and pyramids efficiently for big raster|
 
