@@ -11,7 +11,7 @@ Target system: Python (https://www.python.org/)
 interface: PyCharm
 Functional requirements:
                         inputs: A txt file with a list of planet quads (either depth or surface reflectance ones) and optional flags in 1) and 2) above 
-                        outputs: A mosaic from quads listed in the txt file and spatially subset if the shapefile flag was raised. 
+                        outputs: A mosaic from quads listed in the txt file and spatially subset if the shapefile flag is included.
 						
 Examples: 
                     1) Displaying the script help (use the -h flag):
