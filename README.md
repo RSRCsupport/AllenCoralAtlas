@@ -2,7 +2,7 @@
 
 This repository contain code to process [ACA](https://allencoralatlas.org/) planet data.
 
-The scripts above were developed to build mosaics from Planet quads delivered in the Vulcan bucket. They are bassically python wrappers 
+The python scripts above were developed to build mosaics from Planet quads delivered in the Vulcan bucket. They are bassically python wrappers 
 for [gdal tools](https://gdal.org/) and meant to be run in a linux environment (High Performance 
 computer (HPC) or a virtual machines in cloud computing platforms (e.g. [Google Cloud](https://cloud.google.com/)))
 
@@ -24,11 +24,10 @@ and you created a project (if not follow
  ([see details here](https://cloud.google.com/compute/docs/quickstart-linux) and 
  [here](https://cloud.google.com/compute/docs/instances/create-start-instance)). For a more general documentation
  about virtual machines (see [this](https://cloud.google.com/compute/docs/instances/)). Figure below
- show the sequence from creating to start a VM 
+ show the sequence from creating to start a VM.
  
  
- ![flowchart](https://github.com/RSRCsupport/AllenCoralAtlas/blob/master/FlowChartVM.jpg)
- 
+ ![FlowchartVM](https://github.com/RSRCsupport/AllenCoralAtlas/blob/master/FlowChartVM.png)
  
  
  Due to the amount of data to be mosaicked and my experience using the HPC for running the code, 
