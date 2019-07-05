@@ -89,8 +89,8 @@ and you created a project (if not follow
  The same process can be used to move all the scripts in Table 1 above to the VM's home dir
  
  Once all the scripts and data are available in the VM's home dir they can be run directly from the command line. 
- I included a help flag when I wrote the scripts. By using "-h" you will get a list with all the options available to pre-proces data
- A more detailed help with examples was included as docstrings in each code to understand outputs you get from them.
+ I included a help flag when I wrote the scripts. By using "-h" you will get a list with all the options available to pre-proces data.
+ A more detailed help with examples was included as docstrings in each code to better understand outputs you get from them.
  Below each script with their associated help. 
  
  - mosaic_depth.py
