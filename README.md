@@ -2,8 +2,8 @@
 
 This repository contain code to process [ACA](https://allencoralatlas.org/) planet data.
 
-The python scripts above were developed to build mosaics from Planet quads delivered in the Vulcan bucket. They are bassically python wrappers 
-for [gdal tools](https://gdal.org/) and meant to be run in a linux environment (High Performance 
+The python scripts above were developed to build mosaics from Planet quads delivered in the Vulcan bucket. They are basically python wrappers 
+for [gdal tools](https://gdal.org/) and meant to be run in a Linux environment (High Performance 
 computer (HPC) or virtual machines in cloud computing platforms (e.g. [Google Cloud](https://cloud.google.com/)))
 
 Table 1. Scripts to mosaic Planet quads
@@ -89,7 +89,7 @@ and you created a project (if not follow
  The same process can be used to move all the scripts in Table 1 above to the VM's home dir
  
  Once all the scripts and data are available in the VM's home dir they can be run directly from the command line. 
- I included a help flag when I wrote the scripts. By using "-h" you will get a list with all the options available to pre-proces data.
+ I included a help flag when I wrote the scripts. By using "-h" you will get a list with all the options available to pre-process data.
  A more detailed help with examples was included as docstrings in each code to better understand outputs you get from them.
  Below each script with their associated help. 
  
