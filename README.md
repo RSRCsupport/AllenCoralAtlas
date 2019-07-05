@@ -27,7 +27,7 @@ and you created a project (if not follow
  show the sequence from creating to start a VM 
  
  
- ![flowchart](FlowChartVM.png)
+ ![flowchart](https://github.com/RSRCsupport/AllenCoralAtlas/blob/master/FlowChartVM.jpg)
  
  
  
