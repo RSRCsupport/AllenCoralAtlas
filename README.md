@@ -39,7 +39,7 @@ and you created a project (if not follow
 
  ![VMTerminal](https://github.com/RSRCsupport/AllenCoralAtlas/blob/master/VMlinuxterm.png)
  
- In the terminal type these lines of code one by one to install miniconda 
+ In the terminal type these lines of code one by one to install [miniconda](https://conda.io/en/latest/miniconda.html) 
  (compact [Anaconda](https://www.anaconda.com/) version) that enables to easily install 
  libraries needed for the scripts to work.
  
@@ -54,7 +54,13 @@ and you created a project (if not follow
  ````
  bash Miniconda3-latest-Linux-x86_64.sh
  ````
- 
+  Once miniconda is installed libraries like gdal or [rios](http://www.rioshome.org/en/latest/) can be installed via
+  typical anaconda's conda install command line. To install gdal, search in google conda install gdal 
+  and you will get [this](https://anaconda.org/conda-forge/gdal), thus proceed with the line of code below
+  
+  ```` 
+  conda install -c conda-forge gdal
+  ````
  
  
  
