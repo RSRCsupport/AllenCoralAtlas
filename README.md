@@ -6,7 +6,7 @@ The python scripts above were developed to build mosaics from Planet quads deliv
 for [gdal tools](https://gdal.org/) and meant to be run in a linux environment (High Performance 
 computer (HPC) or virtual machines in cloud computing platforms (e.g. [Google Cloud](https://cloud.google.com/)))
 
-
+Table 1. Scripts to mosaic Planet quads
 
 | Script        | Purpose           |
 |:------------- |:-------------|  
@@ -59,7 +59,7 @@ and you created a project (if not follow
  rodbio2008@vmtovulcan:~$ bash Miniconda3-latest-Linux-x86_64.sh
  ````
   Once miniconda is installed libraries like gdal or [rios](http://www.rioshome.org/en/latest/) can be installed via
-  typical anaconda's "conda install" command line. To install gdal, for example, search in google `conda install gdal` 
+  typical anaconda's "conda install" command line. To install gdal, for example, search in google "conda install gdal" 
   and you will get [this](https://anaconda.org/conda-forge/gdal), thus proceed with the line of code below. 
   
   ```` 
@@ -86,11 +86,11 @@ and you created a project (if not follow
  
  ````
  
- The same process can be used to move all the scripts in the table above to the VM's home dir
+ The same process can be used to move all the scripts in Table 1 above to the VM's home dir
  
- Once all the scripts and data are available in the VM's home dir they can be run directly from the command line 
- Each of these scripts were written including a help flag that lists all the options available.
- A more detailed help with examples was included as docstrings in each code.
+ Once all the scripts and data are available in the VM's home dir they can be run directly from the command line. 
+ I included a help flag when I wrote the scripts. By using "-h" you will get a list with all the options available to pre-proces data
+ A more detailed help with examples was included as docstrings in each code to understand outputs you get from them.
  Below each script with their associated help. 
  
  - mosaic_depth.py
