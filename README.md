@@ -4,7 +4,7 @@ This repository contain code to process [ACA](https://allencoralatlas.org/) plan
 
 The python scripts above were developed to build mosaics from Planet quads delivered in the Vulcan bucket. They are bassically python wrappers 
 for [gdal tools](https://gdal.org/) and meant to be run in a linux environment (High Performance 
-computer (HPC) or a virtual machines in cloud computing platforms (e.g. [Google Cloud](https://cloud.google.com/)))
+computer (HPC) or virtual machines in cloud computing platforms (e.g. [Google Cloud](https://cloud.google.com/)))
 
 
 
@@ -24,26 +24,26 @@ and you created a project (if not follow
  ([see details here](https://cloud.google.com/compute/docs/quickstart-linux) and 
  [here](https://cloud.google.com/compute/docs/instances/create-start-instance)). For a more general documentation
  about virtual machines (see [this](https://cloud.google.com/compute/docs/instances/)). Figure below
- show the sequence from creating to start a VM.
+ show a summarized sequence from creating to starting a VM.
  
  
  ![FlowchartVM](https://github.com/RSRCsupport/AllenCoralAtlas/blob/master/FlowChartVM.png)
  
  
- Due to the amount of data to be mosaicked and my experience using the HPC for running the code, 
+ Due to the amount of data to be mosaicked and my experience using the HPC for running the codes, 
  the VM should have minimum 64 vCPU, 240 GB memory but the higher computer power
- the better, be of course mindful to turn off your virtual machine when not in use to avoid being 
+ the better, be of course mindful to turn off your VM when not in use to avoid being 
  extra charged :sob:. Storage may also be needed within the VM if data needs to be moved from the 
  Vulcan bucket to the VM's home directory (1 TB can be enough for Fiji data for example). You can use [Cloud 
  Storage FUSE](https://cloud.google.com/storage/docs/gcs-fuse) to mount google cloud buckets into the VM as well, however
- this system has much higher latency than working within the VM and can be your script slower 
+ this system has much higher latency than working within the VM and can make your scripts slower. 
  
  Once the VM is started you will see a Linux terminal like the one below. 
 
  ![VMTerminal](https://github.com/RSRCsupport/AllenCoralAtlas/blob/master/VMlinuxterm.png)
  
  In the terminal type these lines of code one by one to install [miniconda](https://conda.io/en/latest/miniconda.html) 
- (compact [Anaconda](https://www.anaconda.com/) version) that enables to easily install 
+ (compacted [Anaconda](https://www.anaconda.com/) version) that enables to easily install 
  libraries needed for the scripts to work.
  
  ````
@@ -59,7 +59,7 @@ and you created a project (if not follow
  rodbio2008@vmtovulcan:~$ bash Miniconda3-latest-Linux-x86_64.sh
  ````
   Once miniconda is installed libraries like gdal or [rios](http://www.rioshome.org/en/latest/) can be installed via
-  typical anaconda's conda install command line. To install gdal, for example, search in google `conda install gdal` 
+  typical anaconda's "conda install" command line. To install gdal, for example, search in google `conda install gdal` 
   and you will get [this](https://anaconda.org/conda-forge/gdal), thus proceed with the line of code below. 
   
   ```` 
