@@ -76,7 +76,7 @@ def subsetVrt(shp, infile):
     :return: a subset from the virtual mosaic
     """
     outname1 = "cut" + infile[:-4] + '.vrt'
-    cmd = 'gdalwarp -of GTiff -dstnodata -999 -cutline {} -crop_to_cutline -dstalpha  {} {}'.format(shp, infile, outname1)
+    cmd = 'gdalwarp -of GTiff -dstnodata -9999 -cutline {} -crop_to_cutline -dstalpha  {} {}'.format(shp, infile, outname1)
     os.system(cmd)
     return (outname1)
 
@@ -104,7 +104,7 @@ def stats(infile):
     :param infile: the .tif  mosaic
     :return: the .tif mosaic with stats calculated
     """
-    cmd = 'python gdalcalcstats.py {} -pyramid -ignore 0'.format(infile)
+    cmd = 'python gdalcalcstats.py {} -pyramid '.format(infile)
     os.system(cmd)
 
 def getCmdargs():
@@ -115,7 +115,7 @@ def getCmdargs():
     parser = argparse.ArgumentParser(description='This script mosaics planet depth or bottom reflectance quads with the options 1) to limit the output to a shapefile extent and 2) set datatype per bands (see options below)')
     parser.add_argument('inputTxtFile', help='txt file built by ls *.tif > nameOfTheMosaic.txt with the Planet depth or bottom reflectance quads to be mosaicked')
     parser.add_argument('-inputshp', help='an optional shapefile for including quads that need to be mosaicked')
-    parser.add_argument('-outputDataType', default = 'UInt16', type=str, help='output data type per band (default UInt16 but can be set to any of these options \
+    parser.add_argument('-outputDataType', default = 'Int16', type=str, help='output data type per band (default UInt16 but can be set to any of these options \
                       Byte/Int16/UInt16/UInt32/Int32/Float32/Float64/CInt16/CInt32/CFloat32/CFloat64)(default=%(default)s)')
     
 	
